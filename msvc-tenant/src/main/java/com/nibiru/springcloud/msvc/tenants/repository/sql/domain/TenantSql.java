@@ -1,5 +1,20 @@
 package com.nibiru.springcloud.msvc.tenants.repository.sql.domain;
 
-public class TenantSql {
+import java.io.Serializable;
 
+import jakarta.persistence.*;
+
+
+
+public class TenantSql implements Serializable  {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	   @Id
+	   @GeneratedValue(strategy = GenerationType.IDENTITY)
+	   @Column(name = "id")
+	   private Long id;
 }
